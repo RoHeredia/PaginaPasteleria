@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+
+}
+
+/* Cuando la pantalla es <= al tamaño definido, los ítems del menú se ven
+ afectados por lo que esta definido*/
+@media (max-width: 760px) {
+    nav ul {
+        padding: 0;
+        flex-direction: column;
+    }
+}
+
+/* Configura las grillas para cada sección de la página */
+
+.container {
+    display: grid;
+    /* Se define cuantas filas y el tamaño(3 filas)/Cuantas columnas y el tamaño*/
+    grid-template: 25vh 400vh 20vh / 100%;
+    /*Se definen las áreas*/
+    grid-template-areas: "header"
+        "contenido"
+        "footer";
+    height: 100vh;
+    /*Separación entre las filas y las columnas*/
+    gap: 1.5px;
+}
+
+.header {
+    grid-area: header;
+}
+
+.contenido {
+    grid-area: contenido;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/* Configura las grillas para la barra del navegador */
+nav {
+    display: grid;
+    grid-template: 100% / 30% 70%;
+    grid-template-areas: "logo menu";
+    height: 100%;
+}
+
+.logo {
+    grid-area: logo;
+}
+
+/* Proporciones del logo */
+.logo img {
+    height: 90%;
+    width: 80%;
+    object-fit: contain;
+}
+
+/* Ítems del menú */
+.menu {
+    grid-area: menu;
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+  letter-spacing: 1px;
+}
+
+.menu li {
+    list-style: none;
+    padding-left: 5rem;
+}
+
+a {
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+/* Configura las grillas para cada sección*/
+.secciones {
+    display: grid;
+    grid-template: 83vh 80vh 80vh 80vh / 40% 60%;
+    grid-template-areas: "main main"
+        "seccion1 img-dulces"
+        "seccion2 img-salados"
+        "seccion3 img-boxes"
+        "seccion4 formulario";
+    gap: 10px;
+    height: 100vh;
+}
+
+.main {
+    grid-area: main;
+}
+
+/* Contenedor del carrusel */
+.carrusel {
+    height: 100%;
+    width: 100%;
+}
+
+/* Define el tamaño de las fotos del carrusel */
+.carrusel img {
+    height: 90%;
+    width: 80%;
+    object-fit: contain;
+}
+
+/* Proporciones de la imagen del carrusel */
+.centrar {
+    margin: auto;
+    margin-top: 4.5rem;
+    display: block;
+}
+
+.seccion1 {
+    grid-area: seccion1;
+}
+
+.img-dulces {
+    grid-area: img-dulces;
+}
+
+/* Define el tamaño de las fotos en cada sección */
+.img-secciones img {
+    width: 85%;
+    height: 95%;
+    object-fit: contain;
+}
+
+.seccion2 {
+    grid-area: seccion2;
+    border-radius: 10px;
+}
+
+.img-salados {
+    grid-area: img-salados;
+}
+
+.seccion3 {
+    grid-area: seccion3;
+    border-radius: 10px;
+}
+
+.img-boxes {
+    grid-area: img-boxes;
+}
+
+/* EStilo a cada título de las secciones */
+.titulo h1 {
+    text-align: justify;
+    margin-left: 1.5rem;
+    margin-top: 8rem;
+    line-height: 1.5rem;
+
+}
+
+/* Estilo al texto de cada sección */
+.texto-secciones p {
+    text-align: justify;
+    margin-left: 5rem;
+    margin-top: 3rem;
+    line-height: 1.5rem;
+
+}
