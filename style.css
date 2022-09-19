@@ -168,3 +168,22 @@ a {
     line-height: 1.5rem;
 
 }
+
+.seccion4{
+    display: flex;
+    flex-direction: column;
+    background-color: beige;
+    text-align: center;
+}
+
+input, textarea{
+    background-color: beige;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid pink;
+}
+
+.s4form5 textarea {
+    border: 2px solid pink;
+    border-radius: 10px;
+}
