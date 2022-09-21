@@ -58,6 +58,7 @@ html {
 .contenido {
     grid-area: contenido;
     background-color: #FBF6E7;
+    background-color: #FBF6E7;
 }
 
 footer {
@@ -99,7 +100,7 @@ nav {
     display: flex;
     align-items: center;
     align-content: space-between;
-    letter-spacing: 1px;
+      letter-spacing: 1px;
 }
 
 .menu li {
@@ -125,6 +126,20 @@ a {
         "grilla-formulario grilla-formulario";
     gap: 10px;
     height: 100vh;
+}
+
+/* Grilla del formulario */
+.grilla-formulario {
+    display: grid;
+    grid-template: 80vh / 20% 60% 20%;
+    grid-template-areas: "col1 seccion4 col2";
+    gap: 10px;
+    height: 100vh;
+    grid-area: grilla-formulario;
+}
+
+.col1 {
+    grid-area: col1;
 }
 
 /* Grilla del formulario */
@@ -341,3 +356,59 @@ img:nth-child(4) {
 img:nth-child(5) {
     animation-delay: 8s;
 }
+
+/* .seccion4{
+    display: flex;
+    flex-direction: column;
+    background-color: #FBF6E7 ;
+    text-align: center;
+}
+
+
+.s4form1 input{
+    background-color: #FBF6E7 ;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid pink;
+}
+
+.s4form2 input{
+    background-color: #FBF6E7 ;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid pink;
+}
+
+.s4form3 input{
+    background-color: #FBF6E7 ;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid pink;
+}
+
+.s4form4 input{
+    background-color: #FBF6E7 ;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid pink;
+}
+
+.s4form5 textarea {
+    border: 2px solid pink;
+    border-radius: 10px;
+    
+}
+
+.s4form6 input{
+    width: 120px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: pink;
+    color: black;
+    font-size: 12px;
+    font-weight: 800px;
+    border-radius: 10px;
+
+
+} */
