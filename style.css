@@ -1,18 +1,38 @@
 * {
     margin: 0;
+    padding: 0;
 }
 
 html {
     font-size: 62.5%;
+}
 
+@font-face {
+    font-family: "louis_george_caf";
+    src: url("../louis_george_caf/Louis\ George\ Cafe\ Italic.ttf");
+}
+
+@font-face {
+    font-family: "louis_george_caf_Bold";
+    src: url("../louis_george_caf/Louis\ George\ Cafe\ Bold\ Italic.ttf");
+}
+
+@font-face {
+    font-family: "louis_george_caf_Light";
+    src: url("../louis_george_caf/Louis\ George\ Cafe\ Light.ttf");
 }
 
 /* Cuando la pantalla es <= al tamaño definido, los ítems del menú se ven
  afectados por lo que esta definido*/
+
 @media (max-width: 760px) {
     nav ul {
         padding: 0;
-        flex-direction: column;
+        /* flex-direction: column;*/
+    }
+
+    nav ul li a {
+        font-size: small;
     }
 }
 
@@ -21,7 +41,7 @@ html {
 .container {
     display: grid;
     /* Se define cuantas filas y el tamaño(3 filas)/Cuantas columnas y el tamaño*/
-    grid-template: 25vh 400vh 20vh / 100%;
+    grid-template: 25vh 450vh 20vh / 100%;
     /*Se definen las áreas*/
     grid-template-areas: "header"
         "contenido"
@@ -37,10 +57,20 @@ html {
 
 .contenido {
     grid-area: contenido;
+    background-color: #FBF6E7;
 }
 
 footer {
     grid-area: footer;
+}
+
+.titulo {
+    text-align: center;
+}
+
+.iconos {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 /* Configura las grillas para la barra del navegador */
@@ -57,6 +87,7 @@ nav {
 
 /* Proporciones del logo */
 .logo img {
+    display: flex;
     height: 90%;
     width: 80%;
     object-fit: contain;
@@ -68,7 +99,7 @@ nav {
     display: flex;
     align-items: center;
     align-content: space-between;
-  letter-spacing: 1px;
+    letter-spacing: 1px;
 }
 
 .menu li {
@@ -79,6 +110,8 @@ nav {
 a {
     text-decoration: none;
     font-size: 2rem;
+    color: rgb(121, 7, 121);
+    font-family: "louis_george_caf_Bold";
 }
 
 /* Configura las grillas para cada sección*/
@@ -89,26 +122,49 @@ a {
         "seccion1 img-dulces"
         "seccion2 img-salados"
         "seccion3 img-boxes"
-        "seccion4 formulario";
+        "grilla-formulario grilla-formulario";
     gap: 10px;
     height: 100vh;
 }
+
+/* Grilla del formulario */
+.grilla-formulario {
+    display: grid;
+    grid-template: 80vh / 20% 60% 20%;
+    grid-template-areas: "col1 seccion4 col2";
+    gap: 10px;
+    height: 100vh;
+    grid-area: grilla-formulario;
+}
+
+.col1 {
+    grid-area: col1;
+}
+
+.col2 {
+    grid-area: col2;
+}
+
+.seccion4 {
+    grid-area: seccion4;
+}
+
+/* "seccion4 formulario" */
 
 .main {
     grid-area: main;
 }
 
-/* Contenedor del carrusel */
-.carrusel {
+/* Define el tamaño de las fotos del carrusel */
+.carousel-item img {
     height: 100%;
     width: 100%;
+    object-fit: contain;
 }
 
-/* Define el tamaño de las fotos del carrusel */
-.carrusel img {
-    height: 90%;
-    width: 80%;
-    object-fit: contain;
+.carrusel div {
+    height: 100%;
+    width: 100%;
 }
 
 /* Proporciones de la imagen del carrusel */
@@ -131,11 +187,18 @@ a {
     width: 85%;
     height: 95%;
     object-fit: contain;
+    transition: transform 0.5s;
+}
+
+.img-secciones img:hover {
+    box-shadow: 0px 10px 15px 5px rgba(182, 182, 182, 1.5);
+    transform: translateY(-10px);
+    border-radius: 15px;
+    background-color: white;
 }
 
 .seccion2 {
     grid-area: seccion2;
-    border-radius: 10px;
 }
 
 .img-salados {
@@ -144,27 +207,137 @@ a {
 
 .seccion3 {
     grid-area: seccion3;
-    border-radius: 10px;
 }
 
 .img-boxes {
     grid-area: img-boxes;
 }
 
-/* EStilo a cada título de las secciones */
+/* Estilo a cada título de las secciones */
 .titulo h1 {
     text-align: justify;
     margin-left: 1.5rem;
     margin-top: 8rem;
-    line-height: 1.5rem;
-
+    letter-spacing: 1px;
+    font-family: "louis_george_caf";
 }
 
 /* Estilo al texto de cada sección */
 .texto-secciones p {
     text-align: justify;
-    margin-left: 5rem;
-    margin-top: 3rem;
-    line-height: 1.5rem;
+    margin-left: 3rem;
+    margin-top: 1rem;
+    line-height: 2.5rem;
+    font-family: "louis_george_caf_Light";
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
 
+/* Estilo a título de contacto y redes */
+.titulo h2 {
+    display: inline;
+    letter-spacing: 1px;
+    font-family: "louis_george_caf";
+    font-size: 2.5rem;
+    margin: 1rem;
+    color: rgb(121, 7, 121);
+}
+
+.fa-envelope {
+    color: rgb(121, 7, 121);
+}
+
+a:hover {
+
+    color: rgb(255, 149, 167);
+}
+
+/* formulario */
+.form-label {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-family: "louis_george_caf";
+}
+
+.btn {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-family: "louis_george_caf";
+}
+
+/* color del boton formulario */
+#botonEnvio:hover {
+    color: black;
+    background-color: rgb(121, 7, 121);
+}
+
+/* Color del borde casilla formulario */
+.form-control:focus {
+    border-color: rgb(121, 7, 121);
+    box-shadow: none;
+}
+
+/* carrusel */
+
+.pic-ctn {
+    width: 100vw;
+    height: 200px;
+}
+
+@keyframes display {
+    0% {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+
+    10% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    20% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    30% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+}
+
+.pic-ctn {
+    position: relative;
+    width: 50vw;
+    height: 150px;
+    margin-top: 4vh;
+}
+
+.pic-ctn>img {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 100px);
+    opacity: 0;
+    animation: display 10s infinite;
+}
+
+img:nth-child(2) {
+    animation-delay: 2s;
+}
+
+img:nth-child(3) {
+    animation-delay: 4s;
+}
+
+img:nth-child(4) {
+    animation-delay: 6s;
+}
+
+img:nth-child(5) {
+    animation-delay: 8s;
 }
