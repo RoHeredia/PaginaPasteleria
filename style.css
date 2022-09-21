@@ -37,6 +37,7 @@ html {
 
 .contenido {
     grid-area: contenido;
+    background-color: #FBF6E7;
 }
 
 footer {
@@ -68,7 +69,7 @@ nav {
     display: flex;
     align-items: center;
     align-content: space-between;
-  letter-spacing: 1px;
+    letter-spacing: 1px;
 }
 
 .menu li {
@@ -172,12 +173,34 @@ a {
 .seccion4{
     display: flex;
     flex-direction: column;
-    background-color: beige;
+    background-color: #FBF6E7 ;
     text-align: center;
 }
 
-input, textarea{
-    background-color: beige;
+
+.s4form1 input{
+    background-color: #FBF6E7 ;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid pink;
+}
+
+.s4form2 input{
+    background-color: #FBF6E7 ;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid pink;
+}
+
+.s4form3 input{
+    background-color: #FBF6E7 ;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid pink;
+}
+
+.s4form4 input{
+    background-color: #FBF6E7 ;
     border: none;
     outline: none;
     border-bottom: 2px solid pink;
@@ -186,4 +209,31 @@ input, textarea{
 .s4form5 textarea {
     border: 2px solid pink;
     border-radius: 10px;
+    
 }
+
+.s4form6 input{
+    width: 120px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: pink;
+    color: black;
+    font-size: 12px;
+    font-weight: 800px;
+    border-radius: 10px;
+
+
+}
+
+.img-secciones > centrar-seccion{
+    display: flex;
+    flex-direction: column;
+    background-color: #FBF6E7 ;
+    justify-content: center;
+    align-items: center;
+       
+}
+
+
+
