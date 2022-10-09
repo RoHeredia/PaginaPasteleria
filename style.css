@@ -9,17 +9,17 @@ html {
 
 @font-face {
     font-family: "louis_george_caf";
-    src: url("img/louis_george_caf/Louis\ George\ Cafe\ Italic.ttf");
+    src: url("louis_george_caf/Louis\ George\ Cafe\ Italic.ttf");
 }
 
 @font-face {
     font-family: "louis_george_caf_Bold";
-    src: url("img/louis_george_caf/Louis\ George\ Cafe\ Bold\ Italic.ttf");
+    src: url("louis_george_caf/Louis\ George\ Cafe\ Bold\ Italic.ttf");
 }
 
 @font-face {
     font-family: "louis_george_caf_Light";
-    src: url("img/louis_george_caf/Louis\ George\ Cafe\ Light.ttf");
+    src: url("louis_george_caf/Louis\ George\ Cafe\ Light.ttf");
 }
 
 /* Cuando la pantalla es <= al tamaño definido, los ítems del menú se ven
