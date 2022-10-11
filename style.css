@@ -13,17 +13,17 @@ body {
 
 @font-face {
     font-family: "louis_george_caf";
-    src: url("../louis_george_caf/Louis\ George\ Cafe\ Italic.ttf");
+    src: url("louis_george_caf/Louis\ George\ Cafe\ Italic.ttf");
 }
 
 @font-face {
     font-family: "louis_george_caf_Bold";
-    src: url("../louis_george_caf/Louis\ George\ Cafe\ Bold\ Italic.ttf");
+    src: url("louis_george_caf/Louis\ George\ Cafe\ Bold\ Italic.ttf");
 }
 
 @font-face {
     font-family: "louis_george_caf_Light";
-    src: url("../louis_george_caf/Louis\ George\ Cafe\ Light.ttf");
+    src: url("louis_george_caf/Louis\ George\ Cafe\ Light.ttf");
 }
 
 /* Cuando la pantalla es <= al tamaño definido, los ítems del menú se ven
@@ -249,7 +249,7 @@ a {
     margin-top: 1rem;
     line-height: 2.5rem;
     font-family: "louis_george_caf_Light";
-    font-size: 2rem;
+    font-size: 1.5rem;
     letter-spacing: 1px;
 }
 
@@ -368,58 +368,3 @@ img:nth-child(5) {
     animation-delay: 8s;
 }
 
-/* .seccion4{
-    display: flex;
-    flex-direction: column;
-    background-color: #FBF6E7 ;
-    text-align: center;
-}
-
-
-.s4form1 input{
-    background-color: #FBF6E7 ;
-    border: none;
-    outline: none;
-    border-bottom: 2px solid pink;
-}
-
-.s4form2 input{
-    background-color: #FBF6E7 ;
-    border: none;
-    outline: none;
-    border-bottom: 2px solid pink;
-}
-
-.s4form3 input{
-    background-color: #FBF6E7 ;
-    border: none;
-    outline: none;
-    border-bottom: 2px solid pink;
-}
-
-.s4form4 input{
-    background-color: #FBF6E7 ;
-    border: none;
-    outline: none;
-    border-bottom: 2px solid pink;
-}
-
-.s4form5 textarea {
-    border: 2px solid pink;
-    border-radius: 10px;
-    
-}
-
-.s4form6 input{
-    width: 120px;
-    height: 40px;
-    border: none;
-    outline: none;
-    background-color: pink;
-    color: black;
-    font-size: 12px;
-    font-weight: 800px;
-    border-radius: 10px;
-
-
-} */
