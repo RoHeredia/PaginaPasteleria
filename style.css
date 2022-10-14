@@ -147,16 +147,6 @@ a {
     grid-area: col1;
 }
 
-/* Grilla del formulario */
-.grilla-formulario {
-    display: grid;
-    grid-template: 80vh / 20% 60% 20%;
-    grid-template-areas: "col1 seccion4 col2";
-    gap: 10px;
-    height: 100vh;
-    grid-area: grilla-formulario;
-}
-
 .col1 {
     grid-area: col1;
 }
@@ -180,6 +170,7 @@ a {
     height: 100%;
     width: 100%;
     object-fit: contain;
+
 }
 
 .carrusel div {
@@ -207,15 +198,19 @@ a {
     width: 85%;
     height: 95%;
     object-fit: contain;
-    transition: transform 0.5s;
+       /* transition: transform 0.5s; */
 }
 
 .img-secciones img:hover {
+    filter: opacity(.5);
+ }
+
+  /* .img-secciones img:hover {
     box-shadow: 0px 10px 15px 5px rgba(182, 182, 182, 1.5);
     transform: translateY(-10px);
     border-radius: 15px;
     background-color: white;
-}
+ }  */
 
 .seccion2 {
     grid-area: seccion2;
@@ -240,6 +235,7 @@ a {
     margin-top: 8rem;
     letter-spacing: 1px;
     font-family: "louis_george_caf";
+    color: black;
 }
 
 /* Estilo al texto de cada sección */
@@ -251,6 +247,7 @@ a {
     font-family: "louis_george_caf_Light";
     font-size: 1.5rem;
     letter-spacing: 1px;
+    color: rgb(7, 7, 7);
 }
 
 /* Estilo a título de contacto y redes */
@@ -268,12 +265,12 @@ a {
 }
 
 a:hover {
-
     color: rgb(255, 149, 167);
 }
 
 /* formulario */
-.form-label {
+
+/* .form-label {
     font-size: 1.5rem;
     letter-spacing: 1px;
     font-family: "louis_george_caf";
@@ -283,23 +280,209 @@ a:hover {
     font-size: 1.5rem;
     letter-spacing: 1px;
     font-family: "louis_george_caf";
-}
+} */
 
 /* color del boton formulario */
-#botonEnvio {
+/* #botonEnvio {
     color: white;
     background-color: rgb(121, 7, 121);
+    border-radius: 20%;
 }
 
 #botonEnvio:hover {
     color: black;
     background-color: rgb(255, 149, 167);
-}
+} */
 
 /* Color del borde casilla formulario */
-.form-control:focus {
+/* .form-control:focus {
     border-color: rgb(121, 7, 121);
     box-shadow: none;
+} */
+/* @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400); */
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: rgb(121, 7, 121);
+    font-size: 0.875em;
+}
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+    color: #bbb5af;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: rgb(121, 7, 121);
+    font-size: 0.875em;
+}
+
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+    color: #bbb5af;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: rgb(121, 7, 121);
+    font-size: 0.875em;
+}
+
+input:focus::placeholder,
+textarea:focus:placeholder {
+    color: #bbb5af;
+}
+
+input::-ms-placeholder,
+textarea::-ms-placeholder {
+    color: rgb(121, 7, 121);
+    font-size: 0.875em;
+}
+
+input:focus::-ms-placeholder,
+textarea:focus::-ms-placeholder {
+    color: #bbb5af;
+}
+
+/* on hover placeholder */
+
+input:hover::-webkit-input-placeholder,
+textarea:hover::-webkit-input-placeholder {
+    color: #e2dedb;
+    font-size: 0.875em;
+}
+
+input:hover:focus::-webkit-input-placeholder,
+textarea:hover:focus::-webkit-input-placeholder {
+    color: #cbc6c1;
+}
+
+input:hover::-moz-placeholder,
+textarea:hover::-moz-placeholder {
+    color: #e2dedb;
+    font-size: 0.875em;
+}
+
+input:hover:focus::-moz-placeholder,
+textarea:hover:focus::-moz-placeholder {
+    color: #cbc6c1;
+}
+
+input:hover::placeholder,
+textarea:hover::placeholder {
+    color: #e2dedb;
+    font-size: 0.875em;
+}
+
+input:hover:focus::placeholder,
+textarea:hover:focus::placeholder {
+    color: #cbc6c1;
+}
+
+input:hover::placeholder,
+textarea:hover::placeholder {
+    color: #e2dedb;
+    font-size: 0.875em;
+}
+
+input:hover:focus::-ms-placeholder,
+textarea:hover::focus:-ms-placeholder {
+    color: #cbc6c1;
+}
+
+/* body {
+  font-family: "louis_george_caf";
+  background: #e2dedb;
+  color: #b3aca7;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+} */
+
+
+#form {
+    position: relative;
+    width: 500px;
+    margin: 50px auto 100px auto;
+}
+
+input {
+    font-family: "louis_george_caf";
+    font-size: 0.875em;
+    width: 470px;
+    height: 50px;
+    padding: 0px 15px 0px 15px;
+
+    background: transparent;
+    outline: none;
+    color: rgb(255, 232, 236);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+
+    border: solid 1px rgb(121, 7, 121);
+    border-bottom: none;
+
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+
+input:hover {
+    background: rgb(255, 232, 236);
+    color: #e2dedb;
+}
+
+textarea {
+    width: 470px;
+    max-width: 470px;
+    height: 110px;
+    max-height: 110px;
+    padding: 15px;
+
+    background: transparent;
+    outline: none;
+
+    color: rgb(255, 232, 236);
+    font-family: "louis_george_caf";
+    /* font-size: 0.875em; */
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+
+    border: solid 1px rgb(121, 7, 121);
+
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+
+textarea:hover {
+    background: rgb(255, 232, 236);
+    color: #e2dedb;
+}
+
+#submit {
+    width: 502px;
+
+    padding: 0;
+    margin: -5px 0px 0px 0px;
+
+    font-family: "louis_george_caf";
+    font-size: 0.875em;
+    color: rgb(121, 7, 121);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+
+    outline: none;
+    cursor: pointer;
+
+    border: solid 1px rgb(121, 7, 121);
+    border-top: none;
+}
+
+#submit:hover {
+    color: #e2dedb;
 }
 
 textarea {
@@ -368,3 +551,47 @@ img:nth-child(5) {
     animation-delay: 8s;
 }
 
+/* Botón flotante */
+
+.btn-flotante {
+    font-size: 13px;
+    /* Cambiar el tamaño de la tipografia */
+    text-transform: uppercase;
+    /* Texto en mayusculas */
+    font-weight: bold;
+    /* Fuente en negrita o bold */
+    color: #ffffff;
+    /* Color del texto */
+    border-radius: 5px;
+    /* Borde del boton */
+    letter-spacing: 2px;
+    /* Espacio entre letras */
+    background-color: rgb(121, 7, 121);
+    /* Color de fondo */
+    padding: 18px 30px;
+    /* Relleno del boton */
+    position: fixed;
+    bottom: 25px;
+    right: 30px;
+    transition: all 300ms ease 0ms;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+    font-family: "louis_george_caf";
+}
+
+.btn-flotante:hover {
+    background-color: rgb(255, 149, 167);
+    /* Color de fondo al pasar el cursor */
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-7px);
+    color: rgb(121, 7, 121);
+}
+
+@media only screen and (max-width: 600px) {
+    .btn-flotante {
+        font-size: 14px;
+        padding: 12px 20px;
+        bottom: 20px;
+        right: 20px;
+    }
+}

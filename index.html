@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../bootstrap-5.2.2-dist/css/bootstrap.min.css">
-    <script src="../bootstrap-5.2.2-dist/js/bootstrap.min.js"></script>
+    <!-- <link rel="stylesheet" href="../bootstrap-5.2.2-dist/css/bootstrap.min.css">
+    <script src="../bootstrap-5.2.2-dist/js/bootstrap.min.js"></script> -->
     <script src="https://kit.fontawesome.com/184ef29582.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="validación.js">
     <title>Pishiem <strong> Pastelería </strong></title>
 </head>
 
@@ -20,7 +21,7 @@
 
 
                 <ul class="menu">
-                    <li><a href="#home">Home</a></li>
+                    <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#dulces">Dulces</a></li>
                     <li><a href="#salados">Salados</a></li>
                     <li><a href="#boxes">Boxes</a></li>
@@ -30,7 +31,7 @@
         </div>
         <div class="contenido">
             <div class="secciones">
-                <main id="home" class="main">
+                <main id="inicio" class="main">
                     <!-- Carrusel -->
                     <div class="pic-ctn">
                         <img src="./img/carrusel_3.jpg" class="d-block w-100" alt="" class="pic">
@@ -95,7 +96,7 @@
                 </div>
 
                 <!-- Consultas/Formulario-->
-            
+
 
                 <!-- Formulario -->
                 <div class="grilla-formulario">
@@ -112,8 +113,17 @@
 
                             </div>
                             <br><br><br>
+                            <form id="form" class="topBefore">
 
-                            <div class="mb-4">
+                                <input id="name" type="text" placeholder="Nombre">
+                                <input id="email" type="text" placeholder="E-mail">
+                                <input type="number" type="number" placeholder="Teléfono">
+                                <textarea id="message" type="text" placeholder="Mensaje"></textarea>
+                                <input id="submit" type="submit" value="Enviar">
+
+                            </form>
+
+                            <!-- <div class="mb-4">
                                 <label for="exampleFormControlInput1" class="form-label">Nombre</label>
                                 <input type="text" name="Nombre" class="form-control" id="exampleFormControlInput1"
                                     placeholder="ingresa tu nombre">
@@ -137,21 +147,26 @@
                                 <input type="number" name="Telefono" class="form-control" id="exampleFormControlInput1"
                                     placeholder="ingresa tu teléfono">
                             </div>
-                            <br>
+                            <br> -->
                             <!-- Comentario -->
-                            <div class="mb-4">
+                            <!-- <div class="mb-4">
                                 <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
                                 <textarea class="form-control" name="Mensaje" id="exampleFormControlTextarea1"
                                     placeholder="Mensaje" rows="8"></textarea>
                             </div>
-                            <br>
+                            <br> -->
                             <!-- Botón de envío -->
-                            <button id="botonEnvio" type="submit"
-                                class="btn btn-outline-secondary fa-2x">Enviar</button>
+                            <!-- <button id="botonEnvio" type="submit"
+                                class="btn btn-outline-secondary fa-x">Enviar</button> -->
                     </section>
                     <div class="col2"></div>
                 </div>
             </div>
+        </div>
+
+        <!-- Botón flotante -->
+        <div>
+            <a href="#" class="btn-flotante">Inicio</a>
         </div>
 
         <!-- Píe de página -->
