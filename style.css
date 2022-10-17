@@ -595,3 +595,176 @@ img:nth-child(5) {
         right: 20px;
     }
 }
+
+@media screen and (max-width:600px){
+    nav {
+        width: 108%;
+        
+    }
+    
+    nav ul{
+        padding: 0%;
+    }
+
+    .menu {
+       
+        letter-spacing: 0px;
+    }
+    
+    a {
+        color: rgb(199, 43, 108);
+        
+    }
+
+    .titulo h1 {
+        text-align: center;
+        color: rgb(199, 43, 108);
+    }
+
+    
+    .titulo h2 {
+        
+        font-size: 2rem;
+        color: rgb(199, 43, 108);
+    }
+
+    .fa-envelope {
+        color: rgb(199, 43, 108);
+    }
+
+    input::-webkit-input-placeholder,
+    textarea::-webkit-input-placeholder {
+        color: rgb(199, 43, 108);
+    }
+
+    input::-moz-placeholder,
+    textarea::-moz-placeholder {
+        color: rgb(199, 43, 108);
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        color: rgb(199, 43, 108);
+    }
+
+    input::-ms-placeholder,
+    textarea::-ms-placeholder {
+        color: rgb(199, 43, 108);
+    }
+
+    input {
+        border: solid 1px rgb(199, 43, 108);
+        border-bottom: none;
+    }
+
+    textarea {
+        border: solid 1px rgb(199, 43, 108);
+    }
+
+    #submit {
+        color: rgb(199, 43, 108);
+        border: solid 1px rgb(199, 43, 108);
+        border-top: none;
+    }
+
+    .btn-flotante {
+        background-color: rgb(199, 43, 108);
+        /* Color de fondo */
+    }
+
+    .btn-flotante:hover {
+       color: rgb(199, 43, 108);
+    }
+
+}
+
+@media screen and (min-width:768px){
+    a {
+        color: rgb(121, 7, 121);
+        
+    }
+
+    .titulo h1 {
+        text-align: center;
+        color: rgb(121, 7, 121);
+    }
+
+    .titulo h2 {
+        font-size: 2rem;
+        color: rgb(121, 7, 121);
+        
+    }
+
+    
+    .fa-envelope {
+        color: rgb(121, 7, 121);
+    }
+
+    input::-webkit-input-placeholder,
+    textarea::-webkit-input-placeholder {
+        color: rgb(121, 7, 121);
+    }
+
+    input::-moz-placeholder,
+    textarea::-moz-placeholder {
+        color: rgb(121, 7, 121);
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        color: rgb(121, 7, 121);
+    }
+
+    input::-ms-placeholder,
+    textarea::-ms-placeholder {
+        color: rgb(121, 7, 121);
+    }
+
+    input {
+        border: solid 1px rgb(121, 7, 121);
+        border-bottom: none;
+    }
+
+    textarea {
+        border: solid 1px rgb(121, 7, 121);
+    }
+
+    #submit {
+        color: rgb(121, 7, 121);
+        border: solid 1px rgb(121, 7, 121);
+        border-top: none;
+    }
+
+    .btn-flotante {
+        background-color: rgb(121, 7, 121);
+        /* Color de fondo */
+    }
+
+    .btn-flotante:hover {
+       color: rgb(121, 7, 121);
+    }
+
+    
+}
+
+@media screen and (min-width:1440px){
+    a {
+        font-size: 2.5rem;
+        
+    }
+
+    .titulo h1 {
+        font-size: 3rem;
+    }
+
+    .titulo h2 {
+        font-size: 3rem;
+        
+    }
+
+    .fa-envelope {
+        color: black
+    }
+
+
+}
