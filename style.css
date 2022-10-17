@@ -116,7 +116,7 @@ nav {
 a {
     text-decoration: none;
     font-size: 2rem;
-    color: rgb(121, 7, 121);
+    color: rgba(0, 0, 0, 0.7);
     font-family: "louis_george_caf_Bold";
 }
 
@@ -198,14 +198,14 @@ a {
     width: 85%;
     height: 95%;
     object-fit: contain;
-       /* transition: transform 0.5s; */
+    /* transition: transform 0.5s; */
 }
 
 .img-secciones img:hover {
     filter: opacity(.5);
- }
+}
 
-  /* .img-secciones img:hover {
+/* .img-secciones img:hover {
     box-shadow: 0px 10px 15px 5px rgba(182, 182, 182, 1.5);
     transform: translateY(-10px);
     border-radius: 15px;
@@ -235,7 +235,8 @@ a {
     margin-top: 8rem;
     letter-spacing: 1px;
     font-family: "louis_george_caf";
-    color: black;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 2rem;
 }
 
 /* Estilo al texto de cada sección */
@@ -255,14 +256,14 @@ a {
     display: inline;
     letter-spacing: 1px;
     font-family: "louis_george_caf";
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: 1rem;
-    color: rgb(121, 7, 121);
+    color: rgba(0, 0, 0, 0.7);
 }
 
 .fa-envelope {
-    color: rgb(121, 7, 121);
-}
+    color: rgba(0, 0, 0, 0.7);
+} 
 
 a:hover {
     color: rgb(255, 149, 167);
@@ -387,7 +388,7 @@ textarea:hover::placeholder {
 }
 
 input:hover:focus::-ms-placeholder,
-textarea:hover::focus:-ms-placeholder {
+textarea:hover:focus:-ms-placeholder {
     color: #cbc6c1;
 }
 
@@ -566,7 +567,7 @@ img:nth-child(5) {
     /* Borde del boton */
     letter-spacing: 2px;
     /* Espacio entre letras */
-    background-color: rgb(121, 7, 121);
+    background-color:  rgba(0, 0, 0, 0.7);
     /* Color de fondo */
     padding: 18px 30px;
     /* Relleno del boton */
@@ -580,11 +581,11 @@ img:nth-child(5) {
 }
 
 .btn-flotante:hover {
-    background-color: rgb(255, 149, 167);
+    background-color: rgba(255, 149, 167,0.7);
     /* Color de fondo al pasar el cursor */
     box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
     transform: translateY(-7px);
-    color: rgb(121, 7, 121);
+    color: rgba(0, 0, 0, 0.7);
 }
 
 @media only screen and (max-width: 600px) {
