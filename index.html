@@ -5,23 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="../bootstrap-5.2.2-dist/css/bootstrap.min.css">
-    <script src="../bootstrap-5.2.2-dist/js/bootstrap.min.js"></script> -->
-    <script src="https://kit.fontawesome.com/184ef29582.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="validación.js">
-    <title>Pishiem <strong> Pastelería </strong></title>
+    <link rel="stylesheet" href="validacion.js">
+    <title>Pishiem Pastelería </title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="item header">
+    <header>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="./img/Logo_1.jpg" alt="">
+            </div>
             <nav>
-                <div class="logo"> <img src="./img/Logo_1.jpg" alt=""></div>
-
-
-                <ul class="menu">
-                    <li><a href="#inicio">Inicio</a></li>
+                <ul>
+                    <li><a href="#">Home</a></li>
                     <li><a href="#dulces">Dulces</a></li>
                     <li><a href="#salados">Salados</a></li>
                     <li><a href="#boxes">Boxes</a></li>
@@ -29,158 +26,132 @@
                 </ul>
             </nav>
         </div>
-        <div class="contenido">
-            <div class="secciones">
-                <main id="inicio" class="main">
-                    <!-- Carrusel -->
-                    <div class="pic-ctn">
-                        <img src="./img/carrusel_3.jpg" class="d-block w-100" alt="" class="pic">
-                        <img src="./img/carrusel_1.jpg" class="d-block w-100" alt="" class="pic">
-                        <img src="./img/carrusel_2.jpg" class="d-block w-100" alt="" class="pic">
-                        <img src="./img/carrusel_4.jpg" class="d-block w-100" alt="" class="pic">
-                        <img src="./img/carrusel_5.jpg" class="d-block w-100" alt="" class="pic">
-                    </div>
+    </header>
+    <!-- 1 Sección / Carrusel  -->
 
-                </main>
-                <!-- Secciones -->
-                <section id="dulces" class="seccion1">
-                    <div class="titulo">
-                        <h1>Dulces</h1>
-                        <br><br>
-                    </div>
-                    <div class="texto-secciones">
-                        <p>Variedad de tortas, tartas, budines y más. ¿Todavía no las probaste?
-                            <br>Hacenos tu consulta por pedidos, precios y envíos.
-                        </p>
-
-                        <br><br>
-                    </div>
-                </section>
-
-                <div class="img-secciones">
-                    <img class="centrar-seccion" src="./img/torta.jpg" alt="">
-                </div>
-                <section id="salados" class="seccion2">
-                    <div class="titulo">
-                        <h1>Salados</h1>
-                        <br><br>
-                    </div>
-                    <div class="texto-secciones">
-                        <p>Mini tortas de miga, chipa, roquejores, sanguches de scones de queso y más
-                            <br>El mejor regalo para los amantes de lo salado<br>Hacenos tu consulta por pedidos,
-                            precios y envíos.
-                        </p>
-                        <br><br>
-                    </div>
-                </section>
-
-                <div class="img-secciones">
-                    <img class="centrar-seccion" src="./img/pan.jpg" alt="">
-                </div>
-
-                <section id="boxes" class="seccion3">
-                    <div class="titulo">
-                        <h1>Box Regalo</h1>
-                        <br><br>
-                    </div>
-                    <div class="texto-secciones">
-                        <p>Tenemos variedad de opciones para regalar y quedar genial. Reserva tu box.
-                            <br>Hacenos tu consulta por pedidos, precios y envíos.
-                        </p>
-                        <br><br>
-                    </div>
-                </section>
-
-                <div class="img-secciones">
-                    <img class="centrar-seccion" src="./img/caja.jpg" alt="">
-                </div>
-
-                <!-- Consultas/Formulario-->
-
-
-                <!-- Formulario -->
-                <div class="grilla-formulario">
-                    <div class="col1"></div>
-                    <section id="contacto" class="seccion4">
-
-                        <form action=https://formspree.io/f/mpznpkoz method="POST">
-
-                            <div class="titulo">
-                                <!-- Icono formulario -->
-                                <i class="fa-regular fa-envelope fa-bounce fa-4x"
-                                    style=" --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; --fa-bounce-rebound: 0;"></i>
-                                <h2>Contacto</h2>
-
-                            </div>
-                            <br><br><br>
-                            <form id="form" class="topBefore">
-
-                                <input id="name" type="text" placeholder="Nombre">
-                                <input id="email" type="text" placeholder="E-mail">
-                                <input type="number" type="number" placeholder="Teléfono">
-                                <textarea id="message" type="text" placeholder="Mensaje"></textarea>
-                                <input id="submit" type="submit" value="Enviar">
-
-                            </form>
-
-                            <!-- <div class="mb-4">
-                                <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-                                <input type="text" name="Nombre" class="form-control" id="exampleFormControlInput1"
-                                    placeholder="ingresa tu nombre">
-                            </div>
-                            <br>
-                            
-                            <div class="mb-4">
-                                <label for="exampleFormControlInput1" class="form-label">Apellido</label>
-                                <input type="text" name="Apellido" class="form-control" id="exampleFormControlInput1"
-                                    placeholder="ingresa tu apellido">
-                            </div>
-                            <br>
-                            <div class="mb-4">
-                                <label for="exampleFormControlInput1" class="form-label">E-mail</label>
-                                <input type="email" name="Email" class="form-control" id="exampleFormControlInput1"
-                                    placeholder="ingresa tu email">
-                            </div>
-                            <br>
-                            <div class="mb-4">
-                                <label for="exampleFormControlInput1" class="form-label">Teléfono</label>
-                                <input type="number" name="Telefono" class="form-control" id="exampleFormControlInput1"
-                                    placeholder="ingresa tu teléfono">
-                            </div>
-                            <br> -->
-                            <!-- Comentario -->
-                            <!-- <div class="mb-4">
-                                <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-                                <textarea class="form-control" name="Mensaje" id="exampleFormControlTextarea1"
-                                    placeholder="Mensaje" rows="8"></textarea>
-                            </div>
-                            <br> -->
-                            <!-- Botón de envío -->
-                            <!-- <button id="botonEnvio" type="submit"
-                                class="btn btn-outline-secondary fa-x">Enviar</button> -->
-                    </section>
-                    <div class="col2"></div>
-                </div>
+    <div class="container">
+        <section class="carrousel">
+            <div class="pic-ctn">
+                <img src="./img/carrusel_1.jpg" alt="">
+                <img src="./img/carrusel_2.jpg" alt="">
+                <img src="./img/carrusel_3.jpg" alt="">
+                <img src="./img/carrusel_4.jpg" alt="">
+                <img src="./img/carrusel_5.jpg" alt="">
             </div>
-        </div>
+        </section>
+        <!--  2 Sección / Dulces  -->
 
-        <!-- Botón flotante -->
+        <section class="section" id="dulces">
+            <div class="section-text">
+                <h2>Dulces</h2>
+                <p>Variedad de tortas, tartas, budines y más. ¿Todavía no
+                    las probaste?
+                    <br>Hacenos tu consulta por pedidos, precios y envíos.
+                </p>
+            </div>
+            <div class="section-image">
+                <img src="./img/dulce.jpg" alt="" id="imgDulce">
+            </div>
+        </section>
+        <!--  Sección 3 / Salados  -->
+
+        <section class="section" id="salados">
+            <div class="section-text">
+                <h2>Salados</h2>
+                <p>Mini tortas de miga, chipa, roquejores, sanguches de
+                    scones de queso y más
+                    <br>El mejor regalo para los amantes de lo salado<br>Hacenos
+                    tu consulta por pedidos,
+                    precios y envíos.
+                </p>
+            </div>
+            <div class="section-image">
+                <img src="./img/salado.jpg" alt="" id="imgSalado">
+            </div>
+        </section>
+        <!--  Sección 4 / Boxes -->
+
+        <section class="section" id="boxes">
+            <div class="section-text">
+                <h2>Boxes</h2>
+                <p>Tenemos variedad de opciones para regalar y quedar
+                    genial. Reserva tu box.
+                    <br>Hacenos tu consulta por pedidos, precios y envíos.
+                </p>
+            </div>
+            <div class="section-image">
+                <img src="./img/boxes.jpg" alt="" id="imgBoxes">
+            </div>
+        </section>
+
+        <!--  Título e ícono del formulario  -->
+
+        <section class="section section-form" id="contacto">
+            <div class="section-text">
+                <div class="form-title">
+
+                    <h2><i class="fa-regular fa-envelope fa-bounce fa-1x" style=" --fa-bounce-start-scale-x: 1;
+                            --fa-bounce-start-scale-y: 1;
+                            --fa-bounce-jump-scale-x:
+                            1; --fa-bounce-jump-scale-y: 1;
+                            --fa-bounce-land-scale-x: 1;
+                            --fa-bounce-land-scale-y:
+                            1; --fa-bounce-rebound: 0;"></i> Contacto</h2>
+                </div>
+                <!--  Link a fuente del ícono (sobre animado) -->
+
+                <form action="https://formspree.io/f/mpznpkoz" method="post" id="formularioContacto">
+                    <!--  Sección 5 / Formulario  -->
+
+                    <input type="text" name="nombre" id="name" placeholder="Nombre">
+                    <input type="email" name="email" id="email" placeholder="Email">
+                    <input type="number" name="telefono" id="phone" placeholder="Teléfono">
+                    <textarea name="mensaje" id="message" placeholder="Mensaje"></textarea>
+                    <input id="submit" type="submit" value="Enviar">
+                </form>
+            </div>
+        </section>
+    </div>
+    <!--  Sección verificación de código postal (API) -->
+
+    <section class="section">
         <div>
-            <a href="#" class="btn-flotante">Inicio</a>
+            <h3>Ingrese su código postal para verificar si realizamos
+                envíos
+                a su zona!</h3>
+            <input type="number" name="cp" id="cp" placeholder="Código postal">
+            <input type="button" value="Obtener zonas" id="cpButton">
+            <textarea name="zone" id="zone" disabled placeholder="Zonas"></textarea>
         </div>
+    </section>
+    <!--  Sección contacto -->
 
-        <!-- Píe de página -->
-        <footer>
-                <div class="titulo">
-                <h2>Redes</h2>
-            </div>
-            <br><br>  <br><br>
-                <div class="iconos">
+    <section class="section section-options">
+        <div>
+            <h3>Explorá nuestros productos</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#dulces">Dulces</a></li>
+                <li><a href="#salados">Salados</a></li>
+                <li><a href="#boxes">Boxes</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Nuestras redes sociales</h3>
+            <div class="media-options">
                 <a href="https://www.instagram.com/pishiem.pasteleria/"><i class="fa-brands fa-instagram fa-2x"></i></a>
                 <a href="https://www.facebook.com/pishiempasteleria"><i class="fa-brands fa-facebook fa-2x"></i></a>
             </div>
-        </footer>
-    </div>
+        </div>
+    </section>
+    <!--  Píe de pa´gina  -->
+
+    <footer>
+        <p><strong>&copy; Pishiem 2022</strong></p>
+    </footer>
+    <script src="validacion.js"></script>
+    <script src="https://kit.fontawesome.com/184ef29582.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -1,6 +1,5 @@
 * {
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -8,450 +7,252 @@ html {
 }
 
 body {
+    margin: 0;
     background-color: #FBF6E7;
 }
 
-@font-face {
+/* Fuentes de la página */
+
+ @font-face {
     font-family: "louis_george_caf";
-    src: url("louis_george_caf/Louis\ George\ Cafe\ Italic.ttf");
+    src: url("./louis_george_caf/Louis\ George\ Cafe\ Italic.ttf");
 }
 
 @font-face {
     font-family: "louis_george_caf_Bold";
-    src: url("louis_george_caf/Louis\ George\ Cafe\ Bold\ Italic.ttf");
+    src: url("./louis_george_caf/Louis\ George\ Cafe\ Bold\ Italic.ttf");
 }
 
 @font-face {
     font-family: "louis_george_caf_Light";
-    src: url("louis_george_caf/Louis\ George\ Cafe\ Light.ttf");
-}
+    src: url("./louis_george_caf/Louis\ George\ Cafe\ Light.ttf");
+} 
 
-/* Cuando la pantalla es <= al tamaño definido, los ítems del menú se ven
- afectados por lo que esta definido*/
-
-@media (max-width: 760px) {
-    nav ul {
-        padding: 0;
-        /* flex-direction: column;*/
-    }
-
-    nav ul li a {
-        font-size: small;
-    }
-}
-
-/* Configura las grillas para cada sección de la página */
+/*  Contenedor general de la página */
 
 .container {
-    display: grid;
-    /* Se define cuantas filas y el tamaño(3 filas)/Cuantas columnas y el tamaño*/
-    grid-template: 25vh 420vh 20vh / 100%;
-    /*Se definen las áreas*/
-    grid-template-areas: "header"
-        "contenido"
-        "footer";
-    height: 100vh;
-    /*Separación entre las filas y las columnas*/
-    gap: 1.5px;
+    max-width: 1100px;
+    margin: auto;
 }
 
-.header {
-    grid-area: header;
+/* Títulos de secciones */
+
+h2 {
+    font-size: 2.5em;
+    color: rgb(199, 43, 108);
+    text-align: center;
+    font-family: "louis_george_caf";
+    letter-spacing: 1px;
 }
 
-.contenido {
-    grid-area: contenido;
-    background-color: #FBF6E7;
+/* Títulos de última sección */
+
+h3 {
+    font-size: 2rem;
+    color: rgb(199, 43, 108);
+    font-family: "louis_george_caf";
+    letter-spacing: 1px;
 }
 
-footer {
-    grid-area: footer;
+/* Contenedor del menú */
+
+.nav-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/*  Barra de menú  */
+
+nav {
+    width: 100%;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+/*  Contenedor del logo  */
+
+.logo-container {
+    max-width: 50%;
+    max-height: 50%;
+}
+
+/*  Tamaño de la imagen/ logo  */
+
+.logo-container img {
+    width: 100%;
+    height: 100%;
+    margin-left: 50%;
+}
+
+/*  Color de fondo del menú*/
+
+header {
     background-color: white;
 }
 
-.titulo {
-    text-align: center;
+/*  Lista del menú */
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 50%;
 }
 
-.iconos {
+header ul {
     display: flex;
     justify-content: space-evenly;
 }
 
-/* Configura las grillas para la barra del navegador */
-nav {
-    display: grid;
-    grid-template: 100% / 30% 70%;
-    grid-template-areas: "logo menu";
-    height: 100%;
-    background-color: white;
-}
-
-.logo {
-    grid-area: logo;
-}
-
-/* Proporciones del logo */
-.logo img {
-    display: flex;
-    height: 90%;
-    width: 80%;
-    object-fit: contain;
-}
-
-/* Ítems del menú */
-.menu {
-    grid-area: menu;
-    display: flex;
-    align-items: center;
-    align-content: space-between;
-    letter-spacing: 1px;
-}
-
-.menu li {
-    list-style: none;
-    padding-left: 5rem;
+ul li {
+    margin: 4px 15px;
 }
 
 a {
     text-decoration: none;
+    color: rgb(199, 43, 108);
     font-size: 2rem;
-    color: rgba(0, 0, 0, 0.7);
     font-family: "louis_george_caf_Bold";
 }
-
-/* Configura las grillas para cada sección*/
-.secciones {
-    display: grid;
-    grid-template: 83vh 80vh 80vh 80vh / 40% 60%;
-    grid-template-areas: "main main"
-        "seccion1 img-dulces"
-        "seccion2 img-salados"
-        "seccion3 img-boxes"
-        "grilla-formulario grilla-formulario";
-    gap: 10px;
-    height: 100vh;
-}
-
-/* Grilla del formulario */
-.grilla-formulario {
-    display: grid;
-    grid-template: 80vh / 20% 60% 20%;
-    grid-template-areas: "col1 seccion4 col2";
-    gap: 10px;
-    height: 100vh;
-    grid-area: grilla-formulario;
-}
-
-.col1 {
-    grid-area: col1;
-}
-
-.col1 {
-    grid-area: col1;
-}
-
-.col2 {
-    grid-area: col2;
-}
-
-.seccion4 {
-    grid-area: seccion4;
-}
-
-/* "seccion4 formulario" */
-
-.main {
-    grid-area: main;
-}
-
-/* Define el tamaño de las fotos del carrusel */
-.carousel-item img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-
-}
-
-.carrusel div {
-    height: 100%;
-    width: 100%;
-}
-
-/* Proporciones de la imagen del carrusel */
-.centrar {
-    margin: auto;
-    margin-top: 4.5rem;
-    display: block;
-}
-
-.seccion1 {
-    grid-area: seccion1;
-}
-
-.img-dulces {
-    grid-area: img-dulces;
-}
-
-/* Define el tamaño de las fotos en cada sección */
-.img-secciones img {
-    width: 85%;
-    height: 95%;
-    object-fit: contain;
-    /* transition: transform 0.5s; */
-}
-
-.img-secciones img:hover {
-    filter: opacity(.5);
-}
-
-/* .img-secciones img:hover {
-    box-shadow: 0px 10px 15px 5px rgba(182, 182, 182, 1.5);
-    transform: translateY(-10px);
-    border-radius: 15px;
-    background-color: white;
- }  */
-
-.seccion2 {
-    grid-area: seccion2;
-}
-
-.img-salados {
-    grid-area: img-salados;
-}
-
-.seccion3 {
-    grid-area: seccion3;
-}
-
-.img-boxes {
-    grid-area: img-boxes;
-}
-
-/* Estilo a cada título de las secciones */
-.titulo h1 {
-    text-align: justify;
-    margin-left: 1.5rem;
-    margin-top: 8rem;
-    letter-spacing: 1px;
-    font-family: "louis_george_caf";
-    color: rgba(0, 0, 0, 0.7);
-    font-size: 2rem;
-}
-
-/* Estilo al texto de cada sección */
-.texto-secciones p {
-    text-align: justify;
-    margin-left: 3rem;
-    margin-top: 1rem;
-    line-height: 2.5rem;
-    font-family: "louis_george_caf_Light";
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-    color: rgb(7, 7, 7);
-}
-
-/* Estilo a título de contacto y redes */
-.titulo h2 {
-    display: inline;
-    letter-spacing: 1px;
-    font-family: "louis_george_caf";
-    font-size: 2rem;
-    margin: 1rem;
-    color: rgba(0, 0, 0, 0.7);
-}
-
-.fa-envelope {
-    color: rgba(0, 0, 0, 0.7);
-} 
 
 a:hover {
     color: rgb(255, 149, 167);
 }
 
-/* formulario */
+/*  Contenedor del carrusel */
 
-/* .form-label {
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-    font-family: "louis_george_caf";
+.carrousel {
+    margin-top: 90px;
+    margin-bottom: 90px;
+    height: 95vh;
+    display: none;
 }
 
-.btn {
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-    font-family: "louis_george_caf";
-} */
+/*  Contenedor de las imagenes del carrusel  */
 
-/* color del boton formulario */
-/* #botonEnvio {
-    color: white;
-    background-color: rgb(121, 7, 121);
-    border-radius: 20%;
-}
-
-#botonEnvio:hover {
-    color: black;
-    background-color: rgb(255, 149, 167);
-} */
-
-/* Color del borde casilla formulario */
-/* .form-control:focus {
-    border-color: rgb(121, 7, 121);
-    box-shadow: none;
-} */
-/* @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400); */
-
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-    color: rgb(121, 7, 121);
-    font-size: 0.875em;
-}
-
-input:focus::-webkit-input-placeholder,
-textarea:focus::-webkit-input-placeholder {
-    color: #bbb5af;
-}
-
-input::-moz-placeholder,
-textarea::-moz-placeholder {
-    color: rgb(121, 7, 121);
-    font-size: 0.875em;
-}
-
-input:focus::-moz-placeholder,
-textarea:focus::-moz-placeholder {
-    color: #bbb5af;
-}
-
-input::placeholder,
-textarea::placeholder {
-    color: rgb(121, 7, 121);
-    font-size: 0.875em;
-}
-
-input:focus::placeholder,
-textarea:focus:placeholder {
-    color: #bbb5af;
-}
-
-input::-ms-placeholder,
-textarea::-ms-placeholder {
-    color: rgb(121, 7, 121);
-    font-size: 0.875em;
-}
-
-input:focus::-ms-placeholder,
-textarea:focus::-ms-placeholder {
-    color: #bbb5af;
-}
-
-/* on hover placeholder */
-
-input:hover::-webkit-input-placeholder,
-textarea:hover::-webkit-input-placeholder {
-    color: #e2dedb;
-    font-size: 0.875em;
-}
-
-input:hover:focus::-webkit-input-placeholder,
-textarea:hover:focus::-webkit-input-placeholder {
-    color: #cbc6c1;
-}
-
-input:hover::-moz-placeholder,
-textarea:hover::-moz-placeholder {
-    color: #e2dedb;
-    font-size: 0.875em;
-}
-
-input:hover:focus::-moz-placeholder,
-textarea:hover:focus::-moz-placeholder {
-    color: #cbc6c1;
-}
-
-input:hover::placeholder,
-textarea:hover::placeholder {
-    color: #e2dedb;
-    font-size: 0.875em;
-}
-
-input:hover:focus::placeholder,
-textarea:hover:focus::placeholder {
-    color: #cbc6c1;
-}
-
-input:hover::placeholder,
-textarea:hover::placeholder {
-    color: #e2dedb;
-    font-size: 0.875em;
-}
-
-input:hover:focus::-ms-placeholder,
-textarea:hover:focus:-ms-placeholder {
-    color: #cbc6c1;
-}
-
-/* body {
-  font-family: "louis_george_caf";
-  background: #e2dedb;
-  color: #b3aca7;
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-} */
-
-
-#form {
+.pic-ctn {
     position: relative;
-    width: 500px;
-    margin: 50px auto 100px auto;
+    width: 100%;
+    height: 100%;
+    margin-top: 4vh;
 }
+
+.pic-ctn>img {
+    animation: none;
+}
+
+/*  Clase que se aplica a todas las secciones  */
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+/*  Párrafos de cada sección  */
+
+.section p {
+    padding: 0 10%;
+    text-align: justify;
+    font-family: "louis_george_caf_Light";
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    line-height: 2rem;
+    color: rgb(15, 15, 15);
+}
+
+.section-image {
+    padding: 0 20%;
+}
+
+/*  Imagenes de cada sección  */
+
+.section-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.section-form {
+    padding-bottom: 50px;
+}
+
+/*  Input de cada sección del formulario  */
 
 input {
+    display: block;
     font-family: "louis_george_caf";
     font-size: 0.875em;
     width: 470px;
-    height: 50px;
+    height: 40px;
     padding: 0px 15px 0px 15px;
-
+    margin: 5px auto;
     background: transparent;
     outline: none;
-    color: rgb(255, 232, 236);
+    color: rgb(199, 43, 108);
     font-size: 1.5rem;
     letter-spacing: 1px;
-
     border: solid 1px rgb(121, 7, 121);
-    border-bottom: none;
-
+    border-radius: 7px;
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
 }
 
+/*  Colores del formulario  */
+
 input:hover {
     background: rgb(255, 232, 236);
-    color: #e2dedb;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: rgb(199, 43, 108);
+}
+
+#submit {
+    color: rgb(199, 43, 108);
+}
+
+#submit:hover {
+    cursor: pointer;
+}
+
+#cpButton {
+    color: rgb(199, 43, 108);
+}
+
+#cpButton:hover {
+    cursor: pointer;
+}
+
+#zone {
+    font-size: 1rem;
 }
 
 textarea {
+    display: block;
+    margin: 5px auto;
     width: 470px;
     max-width: 470px;
     height: 110px;
     max-height: 110px;
     padding: 15px;
-
     background: transparent;
     outline: none;
-
-    color: rgb(255, 232, 236);
+    color: rgb(199, 43, 108);
     font-family: "louis_george_caf";
-    /* font-size: 0.875em; */
     font-size: 1.5rem;
     letter-spacing: 1px;
-
     border: solid 1px rgb(121, 7, 121);
-
+    border-radius: 7px;
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -460,312 +261,232 @@ textarea {
 
 textarea:hover {
     background: rgb(255, 232, 236);
-    color: #e2dedb;
 }
 
-#submit {
-    width: 502px;
-
-    padding: 0;
-    margin: -5px 0px 0px 0px;
-
-    font-family: "louis_george_caf";
-    font-size: 0.875em;
-    color: rgb(121, 7, 121);
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-
-    outline: none;
-    cursor: pointer;
-
-    border: solid 1px rgb(121, 7, 121);
-    border-top: none;
+.section-options {
+    background-color:rgb(240, 238, 238);
+    height: 35vh;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
 }
 
-#submit:hover {
-    color: #e2dedb;
+.section-options ul {
+    margin: 0;
 }
 
-textarea {
-    resize: none;
+.section-options a {
+    font-size: 2rem;
 }
 
-/* carrusel */
-
-@keyframes display {
-    0% {
-        transform: translateX(200px);
-        opacity: 0;
-    }
-
-    10% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-
-    20% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-
-    30% {
-        transform: translateX(-200px);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateX(-200px);
-        opacity: 0;
-    }
+.section-options-image {
+    max-width: 150px;
+    max-height: 100px;
 }
 
-.pic-ctn {
-    position: relative;
-    width: 60vw;
-    height: 40vh;
-    margin-top: 4vh;
-}
-
-.pic-ctn>img {
+.section-options-image img {
     width: 100%;
-    height: 70vh;
-    position: absolute;
-    top: 0;
-    left: calc(50% - 100px);
-    opacity: 0;
-    animation: display 10s infinite;
+    height: 100%;
+    margin-top: 70px;
 }
 
-img:nth-child(2) {
-    animation-delay: 2s;
+.media-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-img:nth-child(3) {
-    animation-delay: 4s;
+/*  Píe de página  */
+
+footer {
+    display: flex;
+    text-align: center;
+    background-color: rgb(50, 50, 50);
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
 }
 
-img:nth-child(4) {
-    animation-delay: 6s;
-}
-
-img:nth-child(5) {
-    animation-delay: 8s;
-}
-
-/* Botón flotante */
-
-.btn-flotante {
-    font-size: 13px;
-    /* Cambiar el tamaño de la tipografia */
-    text-transform: uppercase;
-    /* Texto en mayusculas */
-    font-weight: bold;
-    /* Fuente en negrita o bold */
-    color: #ffffff;
-    /* Color del texto */
-    border-radius: 5px;
-    /* Borde del boton */
-    letter-spacing: 2px;
-    /* Espacio entre letras */
-    background-color:  rgba(0, 0, 0, 0.7);
-    /* Color de fondo */
-    padding: 18px 30px;
-    /* Relleno del boton */
-    position: fixed;
-    bottom: 25px;
-    right: 30px;
-    transition: all 300ms ease 0ms;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    z-index: 99;
+footer p {
+    margin: 0;
+    color: white;
+    font-size: 2rem;
+    letter-spacing: 1px;
     font-family: "louis_george_caf";
 }
 
-.btn-flotante:hover {
-    background-color: rgba(255, 149, 167,0.7);
-    /* Color de fondo al pasar el cursor */
-    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
-    transform: translateY(-7px);
-    color: rgba(0, 0, 0, 0.7);
+.fa-envelope {
+    color: rgb(199, 43, 108);
 }
 
-@media only screen and (max-width: 600px) {
-    .btn-flotante {
-        font-size: 14px;
-        padding: 12px 20px;
-        bottom: 20px;
-        right: 20px;
+/*  Cortes de pantalla */
+
+/*Intermedio*/
+@media screen and (min-width: 768) {
+    h2 {
+        color: rgb(121, 7, 121);
+    }
+
+    h3 {
+        color: rgb(121, 7, 121);
+    }
+
+    a {
+        color: rgb(121, 7, 121);
+    }
+
+    .fa-envelope {
+        color: rgb(121, 7, 121);
+    }
+
+    input {
+        color: rgb(121, 7, 121);
+    }
+
+    textarea {
+        color: rgb(121, 7, 121);
+    }
+
+    #submit {
+        color: rgb(121, 7, 121);
     }
 }
 
-@media screen and (max-width:600px){
+/*Escritorio*/
+@media screen and (min-width: 1100px) {
+    .logo-container {
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+    }
+
     nav {
-        width: 108%;
-        
-    }
-    
-    nav ul{
-        padding: 0%;
+        display: flex;
+        align-content: center;
+        box-shadow: 10px 0px 15px rgba(0, 0, 0, 0.3);
     }
 
-    .menu {
-       
-        letter-spacing: 0px;
-    }
-    
-    a {
-        color: rgb(199, 43, 108);
-        
+    ul {
+        display: flex;
+        flex-direction: row;
+        margin: auto 2px auto auto;
     }
 
-    .titulo h1 {
-        text-align: center;
-        color: rgb(199, 43, 108);
+    ul li {
+        margin: auto 10px;
+        padding: 20px;
     }
 
-    
-    .titulo h2 {
-        
-        font-size: 2rem;
-        color: rgb(199, 43, 108);
+    .logo-container {
+        width: 30%;
+        height: 30%;
     }
 
-    .fa-envelope {
-        color: rgb(199, 43, 108);
+    .section {
+        flex-direction: row;
+        margin-bottom: 50px;
     }
 
-    input::-webkit-input-placeholder,
-    textarea::-webkit-input-placeholder {
-        color: rgb(199, 43, 108);
+    .section-text {
+        width: 50%;
     }
 
-    input::-moz-placeholder,
-    textarea::-moz-placeholder {
-        color: rgb(199, 43, 108);
+    .section-image {
+        padding: 0;
+        max-width: 50%;
+        max-height: 50%;
     }
 
-    input::placeholder,
-    textarea::placeholder {
-        color: rgb(199, 43, 108);
+    #imgDulce {
+        content: url("./img/torta.jpg");
     }
 
-    input::-ms-placeholder,
-    textarea::-ms-placeholder {
-        color: rgb(199, 43, 108);
+    #imgSalado {
+        content: url("./img/pan.jpg");
     }
 
-    input {
-        border: solid 1px rgb(199, 43, 108);
-        border-bottom: none;
-    }
-
-    textarea {
-        border: solid 1px rgb(199, 43, 108);
-    }
-
-    #submit {
-        color: rgb(199, 43, 108);
-        border: solid 1px rgb(199, 43, 108);
-        border-top: none;
-    }
-
-    .btn-flotante {
-        background-color: rgb(199, 43, 108);
-        /* Color de fondo */
-    }
-
-    .btn-flotante:hover {
-       color: rgb(199, 43, 108);
-    }
-
-}
-
-@media screen and (min-width:768px){
-    a {
-        color: rgb(121, 7, 121);
-        
-    }
-
-    .titulo h1 {
-        text-align: center;
-        color: rgb(121, 7, 121);
-    }
-
-    .titulo h2 {
-        font-size: 2rem;
-        color: rgb(121, 7, 121);
-        
-    }
-
-    
-    .fa-envelope {
-        color: rgb(121, 7, 121);
-    }
-
-    input::-webkit-input-placeholder,
-    textarea::-webkit-input-placeholder {
-        color: rgb(121, 7, 121);
-    }
-
-    input::-moz-placeholder,
-    textarea::-moz-placeholder {
-        color: rgb(121, 7, 121);
-    }
-
-    input::placeholder,
-    textarea::placeholder {
-        color: rgb(121, 7, 121);
-    }
-
-    input::-ms-placeholder,
-    textarea::-ms-placeholder {
-        color: rgb(121, 7, 121);
-    }
-
-    input {
-        border: solid 1px rgb(121, 7, 121);
-        border-bottom: none;
-    }
-
-    textarea {
-        border: solid 1px rgb(121, 7, 121);
-    }
-
-    #submit {
-        color: rgb(121, 7, 121);
-        border: solid 1px rgb(121, 7, 121);
-        border-top: none;
-    }
-
-    .btn-flotante {
-        background-color: rgb(121, 7, 121);
-        /* Color de fondo */
-    }
-
-    .btn-flotante:hover {
-       color: rgb(121, 7, 121);
-    }
-
-    
-}
-
-@media screen and (min-width:1440px){
-    a {
-        font-size: 2.5rem;
-        
-    }
-
-    .titulo h1 {
-        font-size: 3rem;
-    }
-
-    .titulo h2 {
-        font-size: 3rem;
-        
+    #imgBoxes {
+        content: url("./img/caja.jpg");
     }
 
     .fa-envelope {
         color: black
     }
 
+    .section-options {
+        justify-content: space-around;
+        margin-bottom: 0;
+    }
 
+    .section-options ul {
+        flex-direction: column;
+    }
+
+    .section-options ul li {
+        padding: 5px;
+    }
+
+    .carrousel {
+        margin-top: 90px;
+        margin-bottom: 90px;
+        height: 95vh;
+        display: block;
+    }
+
+    @keyframes display {
+        0% {
+            transform: translateX(100px);
+            opacity: 0;
+        }
+
+        10% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        20% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        30% {
+            transform: translateX(-100px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(-100px);
+            opacity: 0;
+        }
+    }
+
+    .pic-ctn>img {
+        width: 80%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 10%;
+        opacity: 0;
+        animation: display 10s infinite;
+    }
+
+    img:nth-child(2) {
+        animation-delay: 2s;
+    }
+
+    img:nth-child(3) {
+        animation-delay: 4s;
+    }
+
+    img:nth-child(4) {
+        animation-delay: 6s;
+    }
+
+    img:nth-child(5) {
+        animation-delay: 8s;
+    }
 }
