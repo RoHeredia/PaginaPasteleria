@@ -52,7 +52,7 @@ function obtenerZonas() {
   zoneTextArea.innerHTML = '';
 
   let request = new XMLHttpRequest();
-  request.open("GET", `http://api.zippopotam.us/AR/${cp}`);
+  request.open("GET", `https://api.zippopotam.us/AR/${cp}`);
   request.send();
   request.onload = () => {
       if (request.status === 200) {
