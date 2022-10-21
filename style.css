@@ -48,6 +48,8 @@ h2 {
 /* Títulos de última sección */
 
 h3 {
+    margin-left: 10px;
+    text-align: center;
     font-size: 2rem;
     color: rgb(199, 43, 108);
     font-family: "louis_george_caf";
@@ -489,4 +491,20 @@ footer p {
     img:nth-child(5) {
         animation-delay: 8s;
     }
+}
+
+/*  Botón flotante  */
+
+.btn-whatsapp {
+    display:block;
+    width:70px;
+    height:70px;
+    color:white;
+    position: fixed;
+    right:20px;
+    bottom:15px;
+    border-radius:50%;
+    line-height:80px;
+    text-align:center;
+    z-index:999;
 }
