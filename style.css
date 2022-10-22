@@ -119,12 +119,10 @@ a:hover {
     color: rgb(255, 149, 167);
 }
 
-/*  Contenedor del carrusel */
-
 .carrousel {
-    margin-top: 90px;
+    /* margin-top: 90px;
     margin-bottom: 90px;
-    height: 95vh;
+    height: 95vh; */
     display: none;
 }
 
@@ -433,6 +431,15 @@ footer p {
         width: 30%;
         height: 30%;
     }
+    
+    /*  Contenedor del carrusel */
+
+    /* .carrousel {
+        margin-top: 90px;
+        margin-bottom: 0px;
+        height: 5vh;
+        display: none;
+    } */
 
     .section {
         flex-direction: row;
@@ -481,9 +488,9 @@ footer p {
     }
 
     .carrousel {
-        margin-top: 90px;
-        margin-bottom: 90px;
-        height: 95vh;
+        margin-top: 100px;
+        margin-bottom: 0px;
+        height: 85vh;
         display: block;
     }
 
@@ -515,8 +522,10 @@ footer p {
     }
 
     .pic-ctn>img {
-        width: 80%;
-        height: 100%;
+        /* width: 80%;
+        height: 70%; */
+        width: 80vw;
+        height: 70vh;
         position: absolute;
         top: 0;
         left: 10%;
@@ -561,7 +570,9 @@ footer p {
     }
 
     .pic-ctn>img {
-        left:17%;
+        left:4%;
+        width: 100%;
+        height: 90%;
     }
 
     input {
