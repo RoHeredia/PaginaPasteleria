@@ -31,7 +31,7 @@ body {
 /*  Contenedor general de la página */
 
 .container {
-    max-width: 1100px;
+    max-width: 1000px;
     margin: auto;
 }
 
@@ -50,7 +50,7 @@ h2 {
 h3 {
     margin-left: 10px;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.3rem;
     color: rgb(199, 43, 108);
     font-family: "louis_george_caf";
     letter-spacing: 1px;
@@ -111,7 +111,7 @@ ul li {
 a {
     text-decoration: none;
     color: rgb(199, 43, 108);
-    font-size: 2rem;
+    font-size: 1.2rem;
     font-family: "louis_george_caf_Bold";
 }
 
@@ -156,7 +156,7 @@ a:hover {
     padding: 0 10%;
     text-align: justify;
     font-family: "louis_george_caf_Light";
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     letter-spacing: 1px;
     line-height: 2rem;
     color: rgb(15, 15, 15);
@@ -175,18 +175,16 @@ a:hover {
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
 }
 
-.section-form {
-    padding-bottom: 50px;
-}
-
 /*  Input de cada sección del formulario  */
 
 input {
     display: block;
     font-family: "louis_george_caf";
     font-size: 0.875em;
-    width: 470px;
-    height: 40px;
+    /* width: 470px; */
+    width: 80vw;
+    /* height: 40px; */
+    height: 4vh;
     padding: 0px 15px 0px 15px;
     margin: 5px auto;
     background: transparent;
@@ -242,10 +240,10 @@ input:-webkit-autofill {
 textarea {
     display: block;
     margin: 5px auto;
-    width: 470px;
-    max-width: 470px;
-    height: 110px;
-    max-height: 110px;
+    width: 80vw;
+    max-width: 80vw;
+    height: 8vh;
+    max-height: 8vh;
     padding: 15px;
     background: transparent;
     outline: none;
@@ -267,7 +265,7 @@ textarea:hover {
 
 .section-options {
     background-color:rgb(240, 238, 238);
-    height: 35vh;
+    height: 33vh;
     flex-direction: row;
     justify-content: space-around;
     margin: 0;
@@ -278,7 +276,7 @@ textarea:hover {
 }
 
 .section-options a {
-    font-size: 2rem;
+    font-size: 1.3rem;
 }
 
 .section-options-image {
@@ -290,6 +288,10 @@ textarea:hover {
     width: 100%;
     height: 100%;
     margin-top: 70px;
+}
+
+.section-api {
+    height: 35vh;
 }
 
 .media-options {
@@ -304,7 +306,7 @@ footer {
     display: flex;
     text-align: center;
     background-color: rgb(50, 50, 50);
-    height: 20vh;
+    height: 10vh;
     justify-content: center;
     align-items: center;
 }
@@ -312,7 +314,7 @@ footer {
 footer p {
     margin: 0;
     color: white;
-    font-size: 2rem;
+    font-size: 1.3rem;
     letter-spacing: 1px;
     font-family: "louis_george_caf";
 }
@@ -321,20 +323,55 @@ footer p {
     color: rgb(199, 43, 108);
 }
 
+/*  Botón flotante  */
+
+.btn-whatsapp {
+    display:block;
+    width:70px;
+    height:70px;
+    color:white;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    border-radius:50%;
+    line-height:80px;
+    text-align:center;
+    z-index:999;
+}
+
+.btn-whatsapp a img {
+    width: 80%;
+    height: 80%;
+}
+
 /*  Cortes de pantalla */
 
+@media screen and (max-width: 375px) {
+    .btn-whatsapp a img {
+        width: 70%;
+        height: 70%;
+    }
+}
+
 /*Intermedio*/
-@media screen and (min-width: 768) {
+@media screen and (min-width: 768px) {
     h2 {
         color: rgb(121, 7, 121);
     }
 
     h3 {
         color: rgb(121, 7, 121);
+        font-size: 1.7rem;
     }
 
     a {
         color: rgb(121, 7, 121);
+        font-size: 1.8rem;
+    }
+
+    .section p {
+        font-size: 1.5rem;
+        text-align: center;
     }
 
     .fa-envelope {
@@ -343,6 +380,7 @@ footer p {
 
     input {
         color: rgb(121, 7, 121);
+        height: 5vh;
     }
 
     textarea {
@@ -352,10 +390,14 @@ footer p {
     #submit {
         color: rgb(121, 7, 121);
     }
+
+    .section-options a {
+        font-size: 1.5rem;
+    }
 }
 
 /*Escritorio*/
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1024px) {
     .logo-container {
         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
     }
@@ -381,6 +423,10 @@ footer p {
     ul li {
         margin: auto 10px;
         padding: 20px;
+    }
+
+    a {
+        font-size: 1.8rem;
     }
 
     .logo-container {
@@ -421,6 +467,8 @@ footer p {
 
     .section-options {
         justify-content: space-around;
+        height: 45vh;
+        padding-bottom: 30px;
         margin-bottom: 0;
     }
 
@@ -441,7 +489,7 @@ footer p {
 
     @keyframes display {
         0% {
-            transform: translateX(100px);
+            transform: translateX(90px);
             opacity: 0;
         }
 
@@ -456,22 +504,23 @@ footer p {
         }
 
         30% {
-            transform: translateX(-100px);
+            transform: translateX(-90px);
             opacity: 0;
         }
 
         100% {
-            transform: translateX(-100px);
+            transform: translateX(-90px);
             opacity: 0;
         }
     }
 
     .pic-ctn>img {
-        width: 90%;
-        height: 80vh;
+        width: 80%;
+        height: 100%;
         position: absolute;
         top: 0;
         left: 10%;
+        right: 1%;
         opacity: 0;
         animation: display 10s infinite;
     }
@@ -491,20 +540,35 @@ footer p {
     img:nth-child(5) {
         animation-delay: 8s;
     }
+
+    input {
+        width: 50vw;
+        height: 6vh;
+    }
+
+    textarea {
+        width: 50vw;
+    }
 }
 
-/*  Botón flotante  */
+@media screen and (min-width: 1440px) {
+    a {
+        font-size: 2.5rem;
+    }
 
-.btn-whatsapp {
-    display:block;
-    width:70px;
-    height:70px;
-    color:white;
-    position: fixed;
-    right:20px;
-    bottom:15px;
-    border-radius:50%;
-    line-height:80px;
-    text-align:center;
-    z-index:999;
+    h3 {
+        font-size: 2rem;
+    }
+
+    .pic-ctn>img {
+        left:17%;
+    }
+
+    input {
+        height: 7vh;
+    }
+
+    .section-options a {
+        font-size: 1.8rem;
+    }
 }
